@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+/* Force readable defaults */
+html, body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  background: #f5f6f8;       /* light gray */
+  color: #0a0a0a;            /* near-black text */
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
