@@ -1,0 +1,314 @@
+[
+  {
+    "id": "quadratic_mastery_tree",
+    "title": "Quadratic Equations",
+    "root": "Q.skill",
+    "nodes": {
+      "Q.skill": {
+        "type": "skill",
+        "label": "Quadratic Equations (Skill)",
+        "parent": null,
+        "children": [
+          "QF.q.no_real",
+          "QF.q.double_root",
+          "QF.q.two_real",
+          "QFAC.q.solve"
+        ]
+      },
+
+
+
+
+      "QF.q.no_real": {
+        "type": "question",
+        "label": "Quadratic formula — no real solutions (D < 0)",
+        "parent": "Q.skill",
+        "children": [
+          "QF.step.nr.standard_form",
+          "QF.step.nr.identify_coeffs",
+          "QF.step.nr.compute_disc",
+          "QF.step.nr.classify_disc",
+          "QF.step.nr.no_real_conclusion"
+        ],
+        "question_ref": "QF2.formula.no_real"
+      },
+      "QF.step.nr.standard_form": {
+        "type": "step",
+        "label": "Write in standard form ax^2 + bx + c = 0",
+        "parent": "QF.q.no_real",
+        "children": [],
+        "question_ref": "QF2.formula.no_real",
+        "view": "standard_form"
+      },
+      "QF.step.nr.identify_coeffs": {
+        "type": "step",
+        "label": "Identify a, b, c (with signs)",
+        "parent": "QF.q.no_real",
+        "children": [],
+        "question_ref": "QF2.formula.no_real",
+        "view": "coeffs"
+      },
+      "QF.step.nr.compute_disc": {
+        "type": "step",
+        "label": "Compute D = b^2 - 4ac",
+        "parent": "QF.q.no_real",
+        "children": [],
+        "question_ref": "QF2.formula.no_real",
+        "view": "disc_value"
+      },
+      "QF.step.nr.classify_disc": {
+        "type": "step",
+        "label": "Classify D < 0",
+        "parent": "QF.q.no_real",
+        "children": [],
+        "question_ref": "QF2.formula.no_real",
+        "view": "disc_class"
+      },
+      "QF.step.nr.no_real_conclusion": {
+        "type": "check",
+        "label": "Conclude: No real solutions",
+        "parent": "QF.q.no_real",
+        "children": [],
+        "question_ref": "QF2.formula.no_real",
+        "view": "no_real_conclusion"
+      },
+
+
+
+
+      "QF.q.double_root": {
+        "type": "question",
+        "label": "Quadratic formula — double root (D = 0)",
+        "parent": "Q.skill",
+        "children": [
+          "QF.step.dr.standard_form",
+          "QF.step.dr.identify_coeffs",
+          "QF.step.dr.compute_disc",
+          "QF.step.dr.classify_disc",
+          "QF.step.dr.build_numerator",
+          "QF.step.dr.divide_by_2a",
+          "QF.step.dr.simplify_exact"
+        ],
+        "question_ref": "QF2.formula.double_root"
+      },
+      "QF.step.dr.standard_form": {
+        "type": "step",
+        "label": "Write in standard form ax^2 + bx + c = 0",
+        "parent": "QF.q.double_root",
+        "children": [],
+        "question_ref": "QF2.formula.double_root",
+        "view": "standard_form"
+      },
+      "QF.step.dr.identify_coeffs": {
+        "type": "step",
+        "label": "Identify a, b, c (with signs)",
+        "parent": "QF.q.double_root",
+        "children": [],
+        "question_ref": "QF2.formula.double_root",
+        "view": "coeffs"
+      },
+      "QF.step.dr.compute_disc": {
+        "type": "step",
+        "label": "Compute D = b^2 - 4ac",
+        "parent": "QF.q.double_root",
+        "children": [],
+        "question_ref": "QF2.formula.double_root",
+        "view": "disc_value"
+      },
+      "QF.step.dr.classify_disc": {
+        "type": "step",
+        "label": "Classify D = 0",
+        "parent": "QF.q.double_root",
+        "children": [],
+        "question_ref": "QF2.formula.double_root",
+        "view": "disc_class"
+      },
+      "QF.step.dr.build_numerator": {
+        "type": "step",
+        "label": "Build −b ± √D → −b",
+        "parent": "QF.q.double_root",
+        "children": [],
+        "question_ref": "QF2.formula.double_root",
+        "view": "numerators"
+      },
+      "QF.step.dr.divide_by_2a": {
+        "type": "step",
+        "label": "Divide by 2a",
+        "parent": "QF.q.double_root",
+        "children": [],
+        "question_ref": "QF2.formula.double_root",
+        "view": "over_2a"
+      },
+      "QF.step.dr.simplify_exact": {
+        "type": "step",
+        "label": "Simplify exact root x = -b / (2a)",
+        "parent": "QF.q.double_root",
+        "children": [],
+        "question_ref": "QF2.formula.double_root",
+        "view": "simplify_exact"
+      },
+
+     
+
+
+
+
+      "QF.q.two_real": { 
+        "type": "question",
+        "label": "Quadratic formula — two real roots (D > 0)",
+        "parent": "Q.skill",
+        "children": [
+          "QF.step.tr.standard_form",
+          "QF.step.tr.identify_coeffs",
+          "QF.step.tr.compute_disc",
+          "QF.step.tr.classify_disc",
+          "QF.step.tr.sqrt_disc_exact",
+          "QF.step.tr.build_numerators",
+          "QF.step.tr.divide_by_2a",
+          "QF.step.tr.simplify_exact",
+          "QF.step.tr.decimal_optional"
+        ],
+        "question_ref": "QF2.formula.two_real"
+      },
+      "QF.step.tr.standard_form": {
+        "type": "step",
+        "label": "Write in standard form ax^2 + bx + c = 0",
+        "parent": "QF.q.two_real",
+        "children": [],
+        "question_ref": "QF2.formula.two_real",
+        "view": "standard_form"
+      },
+      "QF.step.tr.identify_coeffs": {
+        "type": "step",
+        "label": "Identify a, b, c (with signs)",
+        "parent": "QF.q.two_real",
+        "children": [],
+        "question_ref": "QF2.formula.two_real",
+        "view": "coeffs"
+      },
+      "QF.step.tr.compute_disc": {
+        "type": "step",
+        "label": "Compute D = b^2 - 4ac",
+        "parent": "QF.q.two_real",
+        "children": [],
+        "question_ref": "QF2.formula.two_real",
+        "view": "disc_value"
+      },
+      "QF.step.tr.classify_disc": {
+        "type": "step",
+        "label": "Classify D > 0",
+        "parent": "QF.q.two_real",
+        "children": [],
+        "question_ref": "QF2.formula.two_real",
+        "view": "disc_class"
+      },
+      "QF.step.tr.sqrt_disc_exact": {
+        "type": "step",
+        "label": "Simplify √D (exact form)",
+        "parent": "QF.q.two_real",
+        "children": [],
+        "question_ref": "QF2.formula.two_real",
+        "view": "sqrt_disc_exact"
+      },
+      "QF.step.tr.build_numerators": {
+        "type": "step",
+        "label": "Build −b ± √D",
+        "parent": "QF.q.two_real",
+        "children": [],
+        "question_ref": "QF2.formula.two_real",
+        "view": "numerators"
+      },
+      "QF.step.tr.divide_by_2a": {
+        "type": "step",
+        "label": "Put over 2a",
+        "parent": "QF.q.two_real",
+        "children": [],
+        "question_ref": "QF2.formula.two_real",
+        "view": "over_2a"
+      },
+      "QF.step.tr.simplify_exact": {
+        "type": "step",
+        "label": "Simplify exact roots",
+        "parent": "QF.q.two_real",
+        "children": [],
+        "question_ref": "QF2.formula.two_real",
+        "view": "simplify_exact"
+      },
+      "QF.step.tr.decimal_optional": {
+        "type": "step",
+        "label": "Decimal approximations (optional)",
+        "parent": "QF.q.two_real",
+        "children": [],
+        "question_ref": "QF2.formula.two_real",
+        "view": "decimal"
+      },
+
+
+      
+
+
+      "QFAC.q.solve": {
+        "type": "question",
+        "label": "Solve quadratic by factorization",
+        "parent": "Q.skill",
+        "children": [
+          "QFAC.step.standard_form",
+          "QFAC.step.extract_gcd",
+          "QFAC.step.sum_product_or_ac",
+          "QFAC.step.write_factors",
+          "QFAC.step.roots_from_zero_product",
+          "QFAC.step.check_by_expansion"
+        ],
+        "question_ref": "QF.int_roots.scaled"
+      },
+      "QFAC.step.standard_form": {
+        "type": "step",
+        "label": "Write in standard form ax^2 + bx + c = 0",
+        "parent": "QFAC.q.solve",
+        "children": [],
+        "question_ref": "QF.int_roots.scaled",
+        "view": "standard_form"
+      },
+      "QFAC.step.extract_gcd": {
+        "type": "step",
+        "label": "Extract GCD / common factor (if any)",
+        "parent": "QFAC.q.solve",
+        "children": [],
+        "question_ref": "QF.int_roots.scaled",
+        "view": "extract_gcd"
+      },
+      "QFAC.step.sum_product_or_ac": {
+        "type": "step",
+        "label": "Sum–product (a=1) or AC method (a≠1)",
+        "parent": "QFAC.q.solve",
+        "children": [],
+        "question_ref": "QF.int_roots.scaled",
+        "view": "sum_product_or_ac"
+      },
+      "QFAC.step.write_factors": {
+        "type": "step",
+        "label": "Write factors (include leading a): a(x−b)(x−c)",
+        "parent": "QFAC.q.solve",
+        "children": [],
+        "question_ref": "QF.int_roots.scaled",
+        "view": "write_factors"
+      },
+      "QFAC.step.roots_from_zero_product": {
+        "type": "step",
+        "label": "Zero-product property → roots",
+        "parent": "QFAC.q.solve",
+        "children": [],
+        "question_ref": "QF.int_roots.scaled",
+        "view": "roots_from_factors"
+      },
+      "QFAC.step.check_by_expansion": {
+        "type": "check",
+        "label": "Check: expand factors match original",
+        "parent": "QFAC.q.solve",
+        "children": [],
+        "question_ref": "QF.int_roots.scaled",
+        "view": "expand_check"
+      }
+    }
+  }
+]
