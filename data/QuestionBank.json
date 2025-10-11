@@ -1,0 +1,442 @@
+{
+  "version": "v1",
+  "families": {
+    "QF.int_roots.scaled": {
+      "description": "Factoring with guaranteed integer roots via a(x-b)(x-c).",
+      "params": {
+        "a": {
+          "int": [
+            1,
+            5
+          ]
+        },
+        "b": {
+          "int": [
+            -10,
+            10
+          ]
+        },
+        "c": {
+          "int": [
+            -10,
+            10
+          ]
+        }
+      },
+      "derive": {
+        "A": "a",
+        "B": "-a*(b+c)",
+        "C": "a*b*c",
+        "r1": "b",
+        "r2": "c",
+        "sum_roots": "b + c",
+        "prod_roots": "b * c"
+      },
+      "views": {
+        "question": {
+          "prompt": "Solve by factoring:  {{A}}x^2 + {{B}}x + {{C}} = 0",
+          "ui": {
+            "type": "roots_set"
+          },
+          "answer": {
+            "type": "set_numeric",
+            "of": [
+              "r1",
+              "r2"
+            ]
+          }
+        },
+        "standard_form": {
+          "prompt": "Fill the coefficients: __ x^2 + __ x + __ = 0",
+          "ui": {
+            "type": "coeff_triplet",
+            "order": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "answer": {
+            "type": "tuple_int",
+            "of": [
+              "A",
+              "B",
+              "C"
+            ]
+          }
+        },
+        "sum_product_or_ac": {
+          "prompt": "Find integers m, n with m + n = {{sum_roots}} and m \u00b7 n = {{prod_roots}}.",
+          "ui": {
+            "type": "pair_unordered_int"
+          },
+          "answer": {
+            "type": "pair_unordered_int",
+            "of": [
+              "r1",
+              "r2"
+            ]
+          }
+        },
+        "write_factors": {
+          "prompt": "Complete: __ ( x \u2212 __ ) ( x \u2212 __ )",
+          "ui": {
+            "type": "factor_binomials",
+            "template": "__ ( x \u2212 __ ) ( x \u2212 __ )",
+            "fields": [
+              "A",
+              "r1",
+              "r2"
+            ]
+          },
+          "answer": {
+            "type": "factor_triplet",
+            "of": [
+              "A",
+              "r1",
+              "r2"
+            ],
+            "options": {
+              "allow_order_swap": true,
+              "allow_A_one_equals_blank": true
+            }
+          }
+        },
+        "roots_from_factors": {
+          "prompt": "From your factors, state the roots (unordered).",
+          "ui": {
+            "type": "roots_set"
+          },
+          "answer": {
+            "type": "set_numeric",
+            "of": [
+              "r1",
+              "r2"
+            ]
+          }
+        }
+      },
+      "presets": [
+        {
+          "id": "QF-FAC-1",
+          "params": {
+            "a": 1,
+            "b": 2,
+            "c": 3
+          }
+        },
+        {
+          "id": "QF-FAC-2",
+          "params": {
+            "a": 2,
+            "b": -3,
+            "c": 5
+          }
+        },
+        {
+          "id": "QF-FAC-3",
+          "params": {
+            "a": 3,
+            "b": -2,
+            "c": -4
+          }
+        }
+      ]
+    },
+    "QF2.formula.no_real": {
+      "description": "Quadratics with D < 0 (no real roots).",
+      "params": {
+        "A": {
+          "int": [
+            1,
+            5
+          ]
+        },
+        "B": {
+          "int": [
+            -12,
+            12
+          ]
+        },
+        "C": {
+          "int": [
+            -12,
+            12
+          ]
+        }
+      },
+      "derive": {
+        "disc": "B*B - 4*A*C"
+      },
+      "views": {
+        "question": {
+          "prompt": "Solve over the reals: {{A}}x^2 + {{B}}x + {{C}} = 0 (use the quadratic formula).",
+          "ui": {
+            "type": "label_choice",
+            "labels": [
+              "NO_REAL_SOLUTIONS"
+            ]
+          },
+          "answer": {
+            "type": "one_of",
+            "of": [
+              "NO_REAL_SOLUTIONS"
+            ]
+          }
+        },
+        "coeffs": {
+          "prompt": "Identify a, b, c for the equation.",
+          "ui": {
+            "type": "coeff_triplet",
+            "order": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "answer": {
+            "type": "tuple_int",
+            "of": [
+              "A",
+              "B",
+              "C"
+            ]
+          }
+        },
+        "disc_value": {
+          "prompt": "Compute D = b^2 \u2212 4ac",
+          "ui": {
+            "type": "single_numeric"
+          },
+          "answer": {
+            "type": "numeric_expr",
+            "of": "B*B - 4*A*C"
+          }
+        },
+        "disc_class": {
+          "prompt": "Classify D (<0, =0, >0).",
+          "ui": {
+            "type": "label_choice",
+            "labels": [
+              "NEG",
+              "ZERO",
+              "POS"
+            ]
+          },
+          "answer": {
+            "type": "one_of",
+            "of": [
+              "NEG"
+            ]
+          }
+        },
+        "no_real_conclusion": {
+          "prompt": "State the conclusion about real solutions.",
+          "ui": {
+            "type": "label_choice",
+            "labels": [
+              "NO_REAL_SOLUTIONS"
+            ]
+          },
+          "answer": {
+            "type": "one_of",
+            "of": [
+              "NO_REAL_SOLUTIONS"
+            ]
+          }
+        }
+      },
+      "presets": [
+        {
+          "id": "QF-NR-1",
+          "params": {
+            "A": 1,
+            "B": 2,
+            "C": 5
+          }
+        },
+        {
+          "id": "QF-NR-2",
+          "params": {
+            "A": 2,
+            "B": 3,
+            "C": 5
+          }
+        },
+        {
+          "id": "QF-NR-3",
+          "params": {
+            "A": 1,
+            "B": 0,
+            "C": 3
+          }
+        }
+      ]
+    },
+    "QF2.formula.double_root": {
+      "description": "Quadratics with D = 0 (repeated root).",
+      "params": {
+        "a": {
+          "int": [
+            1,
+            6
+          ]
+        },
+        "r": {
+          "int": [
+            -9,
+            9
+          ]
+        }
+      },
+      "derive": {
+        "A": "a",
+        "B": "-2*a*r",
+        "C": "a*r*r",
+        "root": "r",
+        "disc": "0"
+      },
+      "views": {
+        "question": {
+          "prompt": "Solve using the quadratic formula: {{A}}x^2 + {{B}}x + {{C}} = 0",
+          "ui": {
+            "type": "roots_multiset"
+          },
+          "answer": {
+            "type": "multiset_numeric",
+            "of": [
+              "root",
+              "root"
+            ]
+          }
+        },
+        "over_2a": {
+          "prompt": "Compute x = (-b \u00b1 \u221aD)/(2a) (here \u221aD = 0). Enter the single root.",
+          "ui": {
+            "type": "single_numeric"
+          },
+          "answer": {
+            "type": "numeric_expr",
+            "of": "(-B)/(2*A)"
+          }
+        }
+      },
+      "presets": [
+        {
+          "id": "QF-DR-1",
+          "params": {
+            "a": 1,
+            "r": 3
+          }
+        },
+        {
+          "id": "QF-DR-2",
+          "params": {
+            "a": 2,
+            "r": -2
+          }
+        },
+        {
+          "id": "QF-DR-3",
+          "params": {
+            "a": 3,
+            "r": 1
+          }
+        }
+      ]
+    },
+    "QF2.formula.two_real": {
+      "description": "Quadratics with two distinct rational roots.",
+      "params": {
+        "a": {
+          "int": [
+            1,
+            5
+          ]
+        },
+        "r1": {
+          "int": [
+            -9,
+            9
+          ]
+        },
+        "r2": {
+          "int": [
+            -9,
+            9
+          ]
+        }
+      },
+      "derive": {
+        "A": "a",
+        "B": "-a*(r1 + r2)",
+        "C": "a*r1*r2",
+        "sqrtD": "abs(a*(r1 - r2))"
+      },
+      "views": {
+        "question": {
+          "prompt": "Solve using the quadratic formula: {{A}}x^2 + {{B}}x + {{C}} = 0",
+          "ui": {
+            "type": "roots_set"
+          },
+          "answer": {
+            "type": "set_numeric",
+            "of": [
+              "r1",
+              "r2"
+            ]
+          }
+        },
+        "sqrt_disc_exact": {
+          "prompt": "Compute \u221aD (exact integer here).",
+          "ui": {
+            "type": "single_numeric"
+          },
+          "answer": {
+            "type": "numeric",
+            "of": "sqrtD"
+          }
+        },
+        "over_2a": {
+          "prompt": "Divide each numerator by 2a (enter both roots, unordered).",
+          "ui": {
+            "type": "roots_set"
+          },
+          "answer": {
+            "type": "set_numeric",
+            "of": [
+              "r1",
+              "r2"
+            ]
+          }
+        }
+      },
+      "presets": [
+        {
+          "id": "QF-TR-1",
+          "params": {
+            "a": 1,
+            "r1": 2,
+            "r2": 3
+          }
+        },
+        {
+          "id": "QF-TR-2",
+          "params": {
+            "a": 1,
+            "r1": -4,
+            "r2": 1
+          }
+        },
+        {
+          "id": "QF-TR-3",
+          "params": {
+            "a": 2,
+            "r1": -1,
+            "r2": 5
+          }
+        }
+      ]
+    }
+  }
+}
