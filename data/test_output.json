@@ -1,0 +1,380 @@
+[
+  {
+    "family": "LEQ.solve.special.linear",
+    "variant": "identity_simple",
+    "question_prompt": "Classify and, if possible, solve: 5x + 3 = 5x + 3",
+    "question_answer": "INFINITE_SOLUTIONS",
+    "derived": {
+      "c": 5,
+      "d": 3,
+      "coeff_x": 0,
+      "rhs": 0
+    },
+    "all_views": {
+      "question": "Classify and, if possible, solve: 5x + 3 = 5x + 3",
+      "move_x": "After moving x-terms to the left, fill ( __ )x = __",
+      "conclude": "Conclude the number of solutions."
+    },
+    "all_answers": {
+      "question": "INFINITE_SOLUTIONS",
+      "move_x": [
+        0,
+        0
+      ],
+      "conclude": "INFINITE_SOLUTIONS"
+    }
+  },
+  {
+    "family": "LEQ.solve.special.linear",
+    "variant": "identity_simple",
+    "question_prompt": "Classify and, if possible, solve: 3x + -12 = 3x + -12",
+    "question_answer": "INFINITE_SOLUTIONS",
+    "derived": {
+      "c": 3,
+      "d": -12,
+      "coeff_x": 0,
+      "rhs": 0
+    },
+    "all_views": {
+      "question": "Classify and, if possible, solve: 3x + -12 = 3x + -12",
+      "move_x": "After moving x-terms to the left, fill ( __ )x = __",
+      "conclude": "Conclude the number of solutions."
+    },
+    "all_answers": {
+      "question": "INFINITE_SOLUTIONS",
+      "move_x": [
+        0,
+        0
+      ],
+      "conclude": "INFINITE_SOLUTIONS"
+    }
+  },
+  {
+    "family": "QF.int_roots.scaled",
+    "variant": null,
+    "question_prompt": "Solve by factoring:  3x^2 + -30x + 48 = 0",
+    "question_answer": [
+      2,
+      8
+    ],
+    "derived": {
+      "A": 3,
+      "B": -30,
+      "C": 48,
+      "r1": 2,
+      "r2": 8,
+      "sum_roots": 10,
+      "prod_roots": 16
+    },
+    "all_views": {
+      "question": "Solve by factoring:  3x^2 + -30x + 48 = 0",
+      "standard_form": "Fill the coefficients: __ x^2 + __ x + __ = 0",
+      "sum_product_or_ac": "Find integers m, n with m + n = 10 and m \u00b7 n = 16.",
+      "write_factors": "Complete: __ ( x \u2212 __ ) ( x \u2212 __ )",
+      "roots_from_factors": "From your factors, state the roots (unordered)."
+    },
+    "all_answers": {
+      "question": [
+        2,
+        8
+      ],
+      "standard_form": [
+        3,
+        -30,
+        48
+      ],
+      "sum_product_or_ac": [
+        2,
+        8
+      ],
+      "write_factors": [
+        3,
+        2,
+        8
+      ],
+      "roots_from_factors": [
+        2,
+        8
+      ]
+    }
+  },
+  {
+    "family": "QF.int_roots.scaled",
+    "variant": null,
+    "question_prompt": "Solve by factoring:  2x^2 + 12x + -32 = 0",
+    "question_answer": [
+      -8,
+      2
+    ],
+    "derived": {
+      "A": 2,
+      "B": 12,
+      "C": -32,
+      "r1": -8,
+      "r2": 2,
+      "sum_roots": -6,
+      "prod_roots": -16
+    },
+    "all_views": {
+      "question": "Solve by factoring:  2x^2 + 12x + -32 = 0",
+      "standard_form": "Fill the coefficients: __ x^2 + __ x + __ = 0",
+      "sum_product_or_ac": "Find integers m, n with m + n = -6 and m \u00b7 n = -16.",
+      "write_factors": "Complete: __ ( x \u2212 __ ) ( x \u2212 __ )",
+      "roots_from_factors": "From your factors, state the roots (unordered)."
+    },
+    "all_answers": {
+      "question": [
+        -8,
+        2
+      ],
+      "standard_form": [
+        2,
+        12,
+        -32
+      ],
+      "sum_product_or_ac": [
+        -8,
+        2
+      ],
+      "write_factors": [
+        2,
+        -8,
+        2
+      ],
+      "roots_from_factors": [
+        -8,
+        2
+      ]
+    }
+  },
+  {
+    "family": "QF2.formula.two_real",
+    "variant": null,
+    "question_prompt": "Solve using the quadratic formula: 4x^2 + 56x + 192 = 0",
+    "question_answer": [
+      -8,
+      -6
+    ],
+    "derived": {
+      "A": 4,
+      "B": 56,
+      "C": 192,
+      "sqrtD": 8
+    },
+    "all_views": {
+      "question": "Solve using the quadratic formula: 4x^2 + 56x + 192 = 0",
+      "sqrt_disc_exact": "Compute \u221aD (exact integer here).",
+      "over_2a": "Divide each numerator by 2a (enter both roots, unordered)."
+    },
+    "all_answers": {
+      "question": [
+        -8,
+        -6
+      ],
+      "sqrt_disc_exact": 8,
+      "over_2a": [
+        -8,
+        -6
+      ]
+    }
+  },
+  {
+    "family": "QF2.formula.two_real",
+    "variant": null,
+    "question_prompt": "Solve using the quadratic formula: 1x^2 + 4x + -32 = 0",
+    "question_answer": [
+      -8,
+      4
+    ],
+    "derived": {
+      "A": 1,
+      "B": 4,
+      "C": -32,
+      "sqrtD": 12
+    },
+    "all_views": {
+      "question": "Solve using the quadratic formula: 1x^2 + 4x + -32 = 0",
+      "sqrt_disc_exact": "Compute \u221aD (exact integer here).",
+      "over_2a": "Divide each numerator by 2a (enter both roots, unordered)."
+    },
+    "all_answers": {
+      "question": [
+        -8,
+        4
+      ],
+      "sqrt_disc_exact": 12,
+      "over_2a": [
+        -8,
+        4
+      ]
+    }
+  },
+  {
+    "family": "QF2.formula.double_root",
+    "variant": null,
+    "question_prompt": "Solve using the quadratic formula: 5x^2 + 90x + 405 = 0",
+    "question_answer": [
+      -9,
+      -9
+    ],
+    "derived": {
+      "A": 5,
+      "B": 90,
+      "C": 405,
+      "root": -9,
+      "disc": 0
+    },
+    "all_views": {
+      "question": "Solve using the quadratic formula: 5x^2 + 90x + 405 = 0",
+      "over_2a": "Compute x = (-b \u00b1 \u221aD)/(2a) (here \u221aD = 0). Enter the single root."
+    },
+    "all_answers": {
+      "question": [
+        -9,
+        -9
+      ],
+      "over_2a": -9.0
+    }
+  },
+  {
+    "family": "QF2.formula.double_root",
+    "variant": null,
+    "question_prompt": "Solve using the quadratic formula: 5x^2 + -70x + 245 = 0",
+    "question_answer": [
+      7,
+      7
+    ],
+    "derived": {
+      "A": 5,
+      "B": -70,
+      "C": 245,
+      "root": 7,
+      "disc": 0
+    },
+    "all_views": {
+      "question": "Solve using the quadratic formula: 5x^2 + -70x + 245 = 0",
+      "over_2a": "Compute x = (-b \u00b1 \u221aD)/(2a) (here \u221aD = 0). Enter the single root."
+    },
+    "all_answers": {
+      "question": [
+        7,
+        7
+      ],
+      "over_2a": 7.0
+    }
+  },
+  {
+    "family": "QF2.formula.no_real",
+    "variant": null,
+    "question_prompt": "Solve over the reals: 1x^2 + 12x + -6 = 0 (use the quadratic formula).",
+    "question_answer": "NO_REAL_SOLUTIONS",
+    "derived": {
+      "disc": 168
+    },
+    "all_views": {
+      "question": "Solve over the reals: 1x^2 + 12x + -6 = 0 (use the quadratic formula).",
+      "coeffs": "Identify a, b, c for the equation.",
+      "disc_value": "Compute D = b^2 \u2212 4ac",
+      "disc_class": "Classify D (<0, =0, >0).",
+      "no_real_conclusion": "State the conclusion about real solutions."
+    },
+    "all_answers": {
+      "question": "NO_REAL_SOLUTIONS",
+      "coeffs": [
+        1,
+        12,
+        -6
+      ],
+      "disc_value": 168,
+      "disc_class": "NEG",
+      "no_real_conclusion": "NO_REAL_SOLUTIONS"
+    }
+  },
+  {
+    "family": "QF2.formula.no_real",
+    "variant": null,
+    "question_prompt": "Solve over the reals: 2x^2 + -12x + 10 = 0 (use the quadratic formula).",
+    "question_answer": "NO_REAL_SOLUTIONS",
+    "derived": {
+      "disc": 64
+    },
+    "all_views": {
+      "question": "Solve over the reals: 2x^2 + -12x + 10 = 0 (use the quadratic formula).",
+      "coeffs": "Identify a, b, c for the equation.",
+      "disc_value": "Compute D = b^2 \u2212 4ac",
+      "disc_class": "Classify D (<0, =0, >0).",
+      "no_real_conclusion": "State the conclusion about real solutions."
+    },
+    "all_answers": {
+      "question": "NO_REAL_SOLUTIONS",
+      "coeffs": [
+        2,
+        -12,
+        10
+      ],
+      "disc_value": 64,
+      "disc_class": "NEG",
+      "no_real_conclusion": "NO_REAL_SOLUTIONS"
+    }
+  },
+  {
+    "family": "QF.sqrt.ax2_minus_B",
+    "variant": null,
+    "question_prompt": "Solve using square roots: 2x^2 - 32 = 0",
+    "question_answer": [
+      -4,
+      4
+    ],
+    "derived": {
+      "B": 32,
+      "root1": 4,
+      "root2": -4
+    },
+    "all_views": {
+      "question": "Solve using square roots: 2x^2 - 32 = 0",
+      "isolate_sq": "Rewrite as x^2 = 32 / 2, then take square roots.",
+      "report_roots": "Enter both real roots (unordered)."
+    },
+    "all_answers": {
+      "question": [
+        -4,
+        4
+      ],
+      "isolate_sq": true,
+      "report_roots": [
+        -4,
+        4
+      ]
+    }
+  },
+  {
+    "family": "QF.sqrt.ax2_minus_B",
+    "variant": null,
+    "question_prompt": "Solve using square roots: 4x^2 - 36 = 0",
+    "question_answer": [
+      -3,
+      3
+    ],
+    "derived": {
+      "B": 36,
+      "root1": 3,
+      "root2": -3
+    },
+    "all_views": {
+      "question": "Solve using square roots: 4x^2 - 36 = 0",
+      "isolate_sq": "Rewrite as x^2 = 36 / 4, then take square roots.",
+      "report_roots": "Enter both real roots (unordered)."
+    },
+    "all_answers": {
+      "question": [
+        -3,
+        3
+      ],
+      "isolate_sq": true,
+      "report_roots": [
+        -3,
+        3
+      ]
+    }
+  }
+]

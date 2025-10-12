@@ -1,0 +1,597 @@
+[
+  {
+    "id": "quadratic_mastery_tree",
+    "title": "Quadratic Equations",
+    "root": "Q.skill",
+    "nodes": {
+      "Q.skill": {
+        "type": "skill",
+        "label": "Quadratic Equations (Skill)",
+        "parent": null,
+        "children": [
+          "QF.q.no_real",
+          "QF.q.double_root",
+          "QF.q.two_real",
+          "QFAC.q.solve"
+        ]
+      },
+      "QF.q.no_real": {
+        "type": "question",
+        "label": "Quadratic formula \u2014 no real solutions (D < 0)",
+        "parent": "Q.skill",
+        "children": [
+          "QF.step.nr.standard_form",
+          "QF.step.nr.identify_coeffs",
+          "QF.step.nr.compute_disc",
+          "QF.step.nr.classify_disc",
+          "QF.step.nr.no_real_conclusion"
+        ],
+        "question_ref": "QF2.formula.no_real"
+      },
+      "QF.step.nr.standard_form": {
+        "type": "step",
+        "label": "Write in standard form ax^2 + bx + c = 0",
+        "parent": "QF.q.no_real",
+        "children": [],
+        "question_ref": "QF2.formula.no_real",
+        "view": "standard_form"
+      },
+      "QF.step.nr.identify_coeffs": {
+        "type": "step",
+        "label": "Identify a, b, c (with signs)",
+        "parent": "QF.q.no_real",
+        "children": [],
+        "question_ref": "QF2.formula.no_real",
+        "view": "coeffs"
+      },
+      "QF.step.nr.compute_disc": {
+        "type": "step",
+        "label": "Compute D = b^2 - 4ac",
+        "parent": "QF.q.no_real",
+        "children": [],
+        "question_ref": "QF2.formula.no_real",
+        "view": "disc_value"
+      },
+      "QF.step.nr.classify_disc": {
+        "type": "step",
+        "label": "Classify D < 0",
+        "parent": "QF.q.no_real",
+        "children": [],
+        "question_ref": "QF2.formula.no_real",
+        "view": "disc_class"
+      },
+      "QF.step.nr.no_real_conclusion": {
+        "type": "check",
+        "label": "Conclude: No real solutions",
+        "parent": "QF.q.no_real",
+        "children": [],
+        "question_ref": "QF2.formula.no_real",
+        "view": "no_real_conclusion"
+      },
+      "QF.q.double_root": {
+        "type": "question",
+        "label": "Quadratic formula \u2014 double root (D = 0)",
+        "parent": "Q.skill",
+        "children": [
+          "QF.step.dr.standard_form",
+          "QF.step.dr.identify_coeffs",
+          "QF.step.dr.compute_disc",
+          "QF.step.dr.classify_disc",
+          "QF.step.dr.build_numerator",
+          "QF.step.dr.divide_by_2a",
+          "QF.step.dr.simplify_exact"
+        ],
+        "question_ref": "QF2.formula.double_root"
+      },
+      "QF.step.dr.standard_form": {
+        "type": "step",
+        "label": "Write in standard form ax^2 + bx + c = 0",
+        "parent": "QF.q.double_root",
+        "children": [],
+        "question_ref": "QF2.formula.double_root",
+        "view": "standard_form"
+      },
+      "QF.step.dr.identify_coeffs": {
+        "type": "step",
+        "label": "Identify a, b, c (with signs)",
+        "parent": "QF.q.double_root",
+        "children": [],
+        "question_ref": "QF2.formula.double_root",
+        "view": "coeffs"
+      },
+      "QF.step.dr.compute_disc": {
+        "type": "step",
+        "label": "Compute D = b^2 - 4ac",
+        "parent": "QF.q.double_root",
+        "children": [],
+        "question_ref": "QF2.formula.double_root",
+        "view": "disc_value"
+      },
+      "QF.step.dr.classify_disc": {
+        "type": "step",
+        "label": "Classify D = 0",
+        "parent": "QF.q.double_root",
+        "children": [],
+        "question_ref": "QF2.formula.double_root",
+        "view": "disc_class"
+      },
+      "QF.step.dr.build_numerator": {
+        "type": "step",
+        "label": "Build \u2212b \u00b1 \u221aD \u2192 \u2212b",
+        "parent": "QF.q.double_root",
+        "children": [],
+        "question_ref": "QF2.formula.double_root",
+        "view": "numerators"
+      },
+      "QF.step.dr.divide_by_2a": {
+        "type": "step",
+        "label": "Divide by 2a",
+        "parent": "QF.q.double_root",
+        "children": [],
+        "question_ref": "QF2.formula.double_root",
+        "view": "over_2a"
+      },
+      "QF.step.dr.simplify_exact": {
+        "type": "step",
+        "label": "Simplify exact root x = -b / (2a)",
+        "parent": "QF.q.double_root",
+        "children": [],
+        "question_ref": "QF2.formula.double_root",
+        "view": "simplify_exact"
+      },
+      "QF.q.two_real": {
+        "type": "question",
+        "label": "Quadratic formula \u2014 two real roots (D > 0)",
+        "parent": "Q.skill",
+        "children": [
+          "QF.step.tr.standard_form",
+          "QF.step.tr.identify_coeffs",
+          "QF.step.tr.compute_disc",
+          "QF.step.tr.classify_disc",
+          "QF.step.tr.sqrt_disc_exact",
+          "QF.step.tr.build_numerators",
+          "QF.step.tr.divide_by_2a",
+          "QF.step.tr.simplify_exact",
+          "QF.step.tr.decimal_optional"
+        ],
+        "question_ref": "QF2.formula.two_real"
+      },
+      "QF.step.tr.standard_form": {
+        "type": "step",
+        "label": "Write in standard form ax^2 + bx + c = 0",
+        "parent": "QF.q.two_real",
+        "children": [],
+        "question_ref": "QF2.formula.two_real",
+        "view": "standard_form"
+      },
+      "QF.step.tr.identify_coeffs": {
+        "type": "step",
+        "label": "Identify a, b, c (with signs)",
+        "parent": "QF.q.two_real",
+        "children": [],
+        "question_ref": "QF2.formula.two_real",
+        "view": "coeffs"
+      },
+      "QF.step.tr.compute_disc": {
+        "type": "step",
+        "label": "Compute D = b^2 - 4ac",
+        "parent": "QF.q.two_real",
+        "children": [],
+        "question_ref": "QF2.formula.two_real",
+        "view": "disc_value"
+      },
+      "QF.step.tr.classify_disc": {
+        "type": "step",
+        "label": "Classify D > 0",
+        "parent": "QF.q.two_real",
+        "children": [],
+        "question_ref": "QF2.formula.two_real",
+        "view": "disc_class"
+      },
+      "QF.step.tr.sqrt_disc_exact": {
+        "type": "step",
+        "label": "Simplify \u221aD (exact form)",
+        "parent": "QF.q.two_real",
+        "children": [],
+        "question_ref": "QF2.formula.two_real",
+        "view": "sqrt_disc_exact"
+      },
+      "QF.step.tr.build_numerators": {
+        "type": "step",
+        "label": "Build \u2212b \u00b1 \u221aD",
+        "parent": "QF.q.two_real",
+        "children": [],
+        "question_ref": "QF2.formula.two_real",
+        "view": "numerators"
+      },
+      "QF.step.tr.divide_by_2a": {
+        "type": "step",
+        "label": "Put over 2a",
+        "parent": "QF.q.two_real",
+        "children": [],
+        "question_ref": "QF2.formula.two_real",
+        "view": "over_2a"
+      },
+      "QF.step.tr.simplify_exact": {
+        "type": "step",
+        "label": "Simplify exact roots",
+        "parent": "QF.q.two_real",
+        "children": [],
+        "question_ref": "QF2.formula.two_real",
+        "view": "simplify_exact"
+      },
+      "QF.step.tr.decimal_optional": {
+        "type": "step",
+        "label": "Decimal approximations (optional)",
+        "parent": "QF.q.two_real",
+        "children": [],
+        "question_ref": "QF2.formula.two_real",
+        "view": "decimal"
+      },
+      "QFAC.q.solve": {
+        "type": "question",
+        "label": "Solve quadratic by factorization",
+        "parent": "Q.skill",
+        "children": [
+          "QFAC.step.standard_form",
+          "QFAC.step.extract_gcd",
+          "QFAC.step.sum_product_or_ac",
+          "QFAC.step.write_factors",
+          "QFAC.step.roots_from_zero_product",
+          "QFAC.step.check_by_expansion"
+        ],
+        "question_ref": "QF.int_roots.scaled"
+      },
+      "QFAC.step.standard_form": {
+        "type": "step",
+        "label": "Write in standard form ax^2 + bx + c = 0",
+        "parent": "QFAC.q.solve",
+        "children": [],
+        "question_ref": "QF.int_roots.scaled",
+        "view": "standard_form"
+      },
+      "QFAC.step.extract_gcd": {
+        "type": "step",
+        "label": "Extract GCD / common factor (if any)",
+        "parent": "QFAC.q.solve",
+        "children": [],
+        "question_ref": "QF.int_roots.scaled",
+        "view": "extract_gcd"
+      },
+      "QFAC.step.sum_product_or_ac": {
+        "type": "step",
+        "label": "Sum\u2013product (a=1) or AC method (a\u22601)",
+        "parent": "QFAC.q.solve",
+        "children": [],
+        "question_ref": "QF.int_roots.scaled",
+        "view": "sum_product_or_ac"
+      },
+      "QFAC.step.write_factors": {
+        "type": "step",
+        "label": "Write factors (include leading a): a(x\u2212b)(x\u2212c)",
+        "parent": "QFAC.q.solve",
+        "children": [],
+        "question_ref": "QF.int_roots.scaled",
+        "view": "write_factors"
+      },
+      "QFAC.step.roots_from_zero_product": {
+        "type": "step",
+        "label": "Zero-product property \u2192 roots",
+        "parent": "QFAC.q.solve",
+        "children": [],
+        "question_ref": "QF.int_roots.scaled",
+        "view": "roots_from_factors"
+      },
+      "QFAC.step.check_by_expansion": {
+        "type": "check",
+        "label": "Check: expand factors match original",
+        "parent": "QFAC.q.solve",
+        "children": [],
+        "question_ref": "QF.int_roots.scaled",
+        "view": "expand_check"
+      }
+    }
+  },
+  {
+    "id": "linear_equations_tree",
+    "title": "Linear Equations",
+    "root": "LEQ.skill",
+    "nodes": {
+      "LEQ.skill": {
+        "type": "skill",
+        "label": "Solving Linear Equations (Skill)",
+        "parent": null,
+        "children": [
+          "LEQ.q.clean_integers",
+          "LEQ.q.negatives",
+          "LEQ.q.fractions_decimals",
+          "LEQ.q.both_sides",
+          "LEQ.q.parentheses",
+          "LEQ.q.special_cases"
+        ]
+      },
+      "LEQ.q.clean_integers": {
+        "type": "question",
+        "label": "Solve ax + b = c (clean integers)",
+        "parent": "LEQ.skill",
+        "children": [
+          "LEQ.step.ci.identify_goal",
+          "LEQ.step.ci.move_constant",
+          "LEQ.step.ci.divide_coeff",
+          "LEQ.step.ci.check_by_substitution"
+        ],
+        "question_ref": "LEQ.solve.basic"
+      },
+      "LEQ.step.ci.identify_goal": {
+        "type": "step",
+        "label": "What does \u2018solve for x\u2019 mean? (isolate x)",
+        "parent": "LEQ.q.clean_integers",
+        "children": [],
+        "question_ref": "LEQ.meta.identify_goal",
+        "view": "identify"
+      },
+      "LEQ.step.ci.move_constant": {
+        "type": "step",
+        "label": "Move the constant term (add/subtract on both sides)",
+        "parent": "LEQ.q.clean_integers",
+        "children": [],
+        "question_ref": "LEQ.solve.basic",
+        "view": "move_constant"
+      },
+      "LEQ.step.ci.divide_coeff": {
+        "type": "step",
+        "label": "Divide by the coefficient of x",
+        "parent": "LEQ.q.clean_integers",
+        "children": [],
+        "question_ref": "LEQ.solve.basic",
+        "view": "divide_coeff"
+      },
+      "LEQ.step.ci.check_by_substitution": {
+        "type": "check",
+        "label": "Check solution by substitution",
+        "parent": "LEQ.q.clean_integers",
+        "children": [],
+        "question_ref": "LEQ.solve.basic",
+        "view": "check_solution"
+      },
+      "LEQ.q.negatives": {
+        "type": "question",
+        "label": "Solve with negative coefficients/constants",
+        "parent": "LEQ.skill",
+        "children": [
+          "LEQ.step.ng.signs_clean",
+          "LEQ.step.ng.move_constant",
+          "LEQ.step.ng.divide_coeff",
+          "LEQ.step.ng.check_by_substitution"
+        ],
+        "question_ref": "LEQ.solve.negatives"
+      },
+      "LEQ.step.ng.signs_clean": {
+        "type": "step",
+        "label": "Clean signs (e.g., subtracting a negative)",
+        "parent": "LEQ.q.negatives",
+        "children": [],
+        "question_ref": "LEQ.solve.negatives",
+        "view": "sign_cleanup"
+      },
+      "LEQ.step.ng.move_constant": {
+        "type": "step",
+        "label": "Move constant term",
+        "parent": "LEQ.q.negatives",
+        "children": [],
+        "question_ref": "LEQ.solve.negatives",
+        "view": "move_constant"
+      },
+      "LEQ.step.ng.divide_coeff": {
+        "type": "step",
+        "label": "Divide by coefficient (careful with negatives)",
+        "parent": "LEQ.q.negatives",
+        "children": [],
+        "question_ref": "LEQ.solve.negatives",
+        "view": "divide_coeff"
+      },
+      "LEQ.step.ng.check_by_substitution": {
+        "type": "check",
+        "label": "Check solution by substitution",
+        "parent": "LEQ.q.negatives",
+        "children": [],
+        "question_ref": "LEQ.solve.negatives",
+        "view": "check_solution"
+      },
+      "LEQ.q.fractions_decimals": {
+        "type": "question",
+        "label": "Solve with fractions/decimals",
+        "parent": "LEQ.skill",
+        "children": [
+          "LEQ.step.fd.clear_denominators",
+          "LEQ.step.fd.move_constant",
+          "LEQ.step.fd.divide_coeff",
+          "LEQ.step.fd.check_by_substitution"
+        ],
+        "question_ref": "LEQ.solve.fractions"
+      },
+      "LEQ.step.fd.clear_denominators": {
+        "type": "step",
+        "label": "Clear denominators / convert decimals",
+        "parent": "LEQ.q.fractions_decimals",
+        "children": [],
+        "question_ref": "LEQ.solve.fractions",
+        "view": "clear_denominators"
+      },
+      "LEQ.step.fd.move_constant": {
+        "type": "step",
+        "label": "Move constant term",
+        "parent": "LEQ.q.fractions_decimals",
+        "children": [],
+        "question_ref": "LEQ.solve.fractions",
+        "view": "move_constant"
+      },
+      "LEQ.step.fd.divide_coeff": {
+        "type": "step",
+        "label": "Divide by coefficient",
+        "parent": "LEQ.q.fractions_decimals",
+        "children": [],
+        "question_ref": "LEQ.solve.fractions",
+        "view": "divide_coeff"
+      },
+      "LEQ.step.fd.check_by_substitution": {
+        "type": "check",
+        "label": "Check solution by substitution",
+        "parent": "LEQ.q.fractions_decimals",
+        "children": [],
+        "question_ref": "LEQ.solve.fractions",
+        "view": "check_solution"
+      },
+      "LEQ.q.both_sides": {
+        "type": "question",
+        "label": "Solve with x on both sides",
+        "parent": "LEQ.skill",
+        "children": [
+          "LEQ.step.bs.simplify_both_sides",
+          "LEQ.step.bs.collect_x_terms",
+          "LEQ.step.bs.move_constant",
+          "LEQ.step.bs.divide_coeff",
+          "LEQ.step.bs.check_by_substitution"
+        ],
+        "question_ref": "LEQ.solve.both_sides"
+      },
+      "LEQ.step.bs.simplify_both_sides": {
+        "type": "step",
+        "label": "Simplify both sides (combine like terms)",
+        "parent": "LEQ.q.both_sides",
+        "children": [],
+        "question_ref": "LEQ.solve.both_sides",
+        "view": "simplify_both"
+      },
+      "LEQ.step.bs.collect_x_terms": {
+        "type": "step",
+        "label": "Collect x-terms on one side",
+        "parent": "LEQ.q.both_sides",
+        "children": [],
+        "question_ref": "LEQ.solve.both_sides",
+        "view": "collect_x"
+      },
+      "LEQ.step.bs.move_constant": {
+        "type": "step",
+        "label": "Move constants to the other side",
+        "parent": "LEQ.q.both_sides",
+        "children": [],
+        "question_ref": "LEQ.solve.both_sides",
+        "view": "move_constant"
+      },
+      "LEQ.step.bs.divide_coeff": {
+        "type": "step",
+        "label": "Divide by coefficient of x",
+        "parent": "LEQ.q.both_sides",
+        "children": [],
+        "question_ref": "LEQ.solve.both_sides",
+        "view": "divide_coeff"
+      },
+      "LEQ.step.bs.check_by_substitution": {
+        "type": "check",
+        "label": "Check solution by substitution",
+        "parent": "LEQ.q.both_sides",
+        "children": [],
+        "question_ref": "LEQ.solve.both_sides",
+        "view": "check_solution"
+      },
+      "LEQ.q.parentheses": {
+        "type": "question",
+        "label": "Solve with parentheses/distribution",
+        "parent": "LEQ.skill",
+        "children": [
+          "LEQ.step.pn.distribute",
+          "LEQ.step.pn.simplify",
+          "LEQ.step.pn.collect_x_terms",
+          "LEQ.step.pn.move_constant",
+          "LEQ.step.pn.divide_coeff",
+          "LEQ.step.pn.check_by_substitution"
+        ],
+        "question_ref": "LEQ.solve.parentheses"
+      },
+      "LEQ.step.pn.distribute": {
+        "type": "step",
+        "label": "Distribute over parentheses",
+        "parent": "LEQ.q.parentheses",
+        "children": [],
+        "question_ref": "LEQ.solve.parentheses",
+        "view": "distribute"
+      },
+      "LEQ.step.pn.simplify": {
+        "type": "step",
+        "label": "Combine like terms",
+        "parent": "LEQ.q.parentheses",
+        "children": [],
+        "question_ref": "LEQ.solve.parentheses",
+        "view": "simplify"
+      },
+      "LEQ.step.pn.collect_x_terms": {
+        "type": "step",
+        "label": "Collect x-terms on one side",
+        "parent": "LEQ.q.parentheses",
+        "children": [],
+        "question_ref": "LEQ.solve.parentheses",
+        "view": "collect_x"
+      },
+      "LEQ.step.pn.move_constant": {
+        "type": "step",
+        "label": "Move constants",
+        "parent": "LEQ.q.parentheses",
+        "children": [],
+        "question_ref": "LEQ.solve.parentheses",
+        "view": "move_constant"
+      },
+      "LEQ.step.pn.divide_coeff": {
+        "type": "step",
+        "label": "Divide by coefficient",
+        "parent": "LEQ.q.parentheses",
+        "children": [],
+        "question_ref": "LEQ.solve.parentheses",
+        "view": "divide_coeff"
+      },
+      "LEQ.step.pn.check_by_substitution": {
+        "type": "check",
+        "label": "Check solution by substitution",
+        "parent": "LEQ.q.parentheses",
+        "children": [],
+        "question_ref": "LEQ.solve.parentheses",
+        "view": "check_solution"
+      },
+      "LEQ.q.special_cases": {
+        "type": "question",
+        "label": "Special cases: no solution / infinitely many",
+        "parent": "LEQ.skill",
+        "children": [
+          "LEQ.step.sc.simplify_both_sides",
+          "LEQ.step.sc.compare_sides",
+          "LEQ.step.sc.conclude_case"
+        ],
+        "question_ref": "LEQ.solve.special"
+      },
+      "LEQ.step.sc.simplify_both_sides": {
+        "type": "step",
+        "label": "Simplify both sides fully",
+        "parent": "LEQ.q.special_cases",
+        "children": [],
+        "question_ref": "LEQ.solve.special",
+        "view": "simplify_both"
+      },
+      "LEQ.step.sc.compare_sides": {
+        "type": "step",
+        "label": "Compare coefficients/constant: identity or contradiction?",
+        "parent": "LEQ.q.special_cases",
+        "children": [],
+        "question_ref": "LEQ.solve.special",
+        "view": "compare_sides"
+      },
+      "LEQ.step.sc.conclude_case": {
+        "type": "check",
+        "label": "Conclude: no solution / infinitely many",
+        "parent": "LEQ.q.special_cases",
+        "children": [],
+        "question_ref": "LEQ.solve.special",
+        "view": "conclude"
+      }
+    }
+  }
+]

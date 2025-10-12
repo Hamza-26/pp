@@ -141,6 +141,11 @@
             "c": -4
           }
         }
+      ],
+      "constraints": [
+        "b != 0",
+        "c != 0",
+        "(b + c) != 0"
       ]
     },
     "QF2.formula.no_real": {
@@ -343,6 +348,9 @@
             "r": 1
           }
         }
+      ],
+      "constraints": [
+        "r != 0"
       ]
     },
     "QF2.formula.two_real": {
@@ -434,6 +442,287 @@
             "a": 2,
             "r1": -1,
             "r2": 5
+          }
+        }
+      ],
+      "constraints": [
+        "r1 != 0",
+        "r2 != 0",
+        "(r1 + r2) != 0"
+      ]
+    },
+    "QF.sqrt.ax2_minus_B": {
+      "description": "Solve Ax^2 - B = 0 via square roots; B = A*r^2, r != 0.",
+      "params": {
+        "A": {
+          "int": [
+            1,
+            6
+          ]
+        },
+        "r": {
+          "int": [
+            -9,
+            9
+          ],
+          "exclude": [
+            0
+          ]
+        }
+      },
+      "derive": {
+        "B": "A * r * r",
+        "root1": "r",
+        "root2": "-r"
+      },
+      "views": {
+        "question": {
+          "prompt": "Solve using square roots: {{A}}x^2 - {{B}} = 0",
+          "ui": {
+            "type": "roots_set"
+          },
+          "answer": {
+            "type": "set_numeric",
+            "of": [
+              "root2",
+              "root1"
+            ]
+          }
+        },
+        "isolate_sq": {
+          "prompt": "Rewrite as x^2 = {{B}} / {{A}}, then take square roots.",
+          "ui": {
+            "type": "ack"
+          },
+          "answer": {
+            "type": "ack"
+          }
+        },
+        "report_roots": {
+          "prompt": "Enter both real roots (unordered).",
+          "ui": {
+            "type": "roots_set"
+          },
+          "answer": {
+            "type": "set_numeric",
+            "of": [
+              "root2",
+              "root1"
+            ]
+          }
+        }
+      },
+      "presets": [
+        {
+          "id": "QF-SQ-1",
+          "params": {
+            "A": 1,
+            "r": 3
+          }
+        },
+        {
+          "id": "QF-SQ-2",
+          "params": {
+            "A": 2,
+            "r": -4
+          }
+        },
+        {
+          "id": "QF-SQ-3",
+          "params": {
+            "A": 5,
+            "r": 2
+          }
+        }
+      ]
+    },
+    "LEQ.solve.special.linear": {
+      "description": "Identity/Contradiction for ax + b = cx + d using isolation form.",
+      "params": {},
+      "variants": [
+        {
+          "id": "identity_simple",
+          "pick_order": [
+            "a",
+            "b"
+          ],
+          "params": {
+            "a": {
+              "int": [
+                -6,
+                6
+              ],
+              "exclude": [
+                0
+              ]
+            },
+            "b": {
+              "int": [
+                -12,
+                12
+              ]
+            }
+          },
+          "derive": {
+            "c": "a",
+            "d": "b",
+            "coeff_x": "a - c",
+            "rhs": "d - b"
+          },
+          "constraints": [
+            "coeff_x == 0",
+            "rhs == 0"
+          ],
+          "views": {
+            "question": {
+              "prompt": "Classify and, if possible, solve: {{a}}x + {{b}} = {{c}}x + {{d}}",
+              "ui": {
+                "type": "label_choice",
+                "labels": [
+                  "ONE_SOLUTION",
+                  "NO_SOLUTION",
+                  "INFINITE_SOLUTIONS"
+                ]
+              },
+              "answer": {
+                "type": "one_of",
+                "of": [
+                  "INFINITE_SOLUTIONS"
+                ]
+              }
+            },
+            "move_x": {
+              "prompt": "After moving x-terms to the left, fill ( __ )x = __",
+              "ui": {
+                "type": "tuple_int",
+                "order": [
+                  "coeff_x",
+                  "rhs"
+                ]
+              },
+              "answer": {
+                "type": "tuple_int",
+                "of": [
+                  "coeff_x",
+                  "rhs"
+                ]
+              }
+            },
+            "conclude": {
+              "prompt": "Conclude the number of solutions.",
+              "ui": {
+                "type": "label_choice",
+                "labels": [
+                  "ONE_SOLUTION",
+                  "NO_SOLUTION",
+                  "INFINITE_SOLUTIONS"
+                ]
+              },
+              "answer": {
+                "type": "one_of",
+                "of": [
+                  "INFINITE_SOLUTIONS"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "id": "contradiction_simple",
+          "pick_order": [
+            "a",
+            "b",
+            "delta"
+          ],
+          "params": {
+            "a": {
+              "int": [
+                -6,
+                6
+              ],
+              "exclude": [
+                0
+              ]
+            },
+            "b": {
+              "int": [
+                -12,
+                12
+              ]
+            },
+            "delta": {
+              "choices": [
+                -3,
+                -2,
+                -1,
+                1,
+                2,
+                3
+              ]
+            }
+          },
+          "derive": {
+            "c": "a",
+            "d": "b + delta",
+            "coeff_x": "a - c",
+            "rhs": "d - b"
+          },
+          "constraints": [
+            "coeff_x == 0",
+            "rhs != 0"
+          ],
+          "views": {
+            "question": {
+              "prompt": "Classify and, if possible, solve: {{a}}x + {{b}} = {{c}}x + {{d}}",
+              "ui": {
+                "type": "label_choice",
+                "labels": [
+                  "ONE_SOLUTION",
+                  "NO_SOLUTION",
+                  "INFINITE_SOLUTIONS"
+                ]
+              },
+              "answer": {
+                "type": "one_of",
+                "of": [
+                  "NO_SOLUTION"
+                ]
+              }
+            },
+            "move_x": {
+              "prompt": "After moving x-terms to the left, fill ( __ )x = __",
+              "ui": {
+                "type": "tuple_int",
+                "order": [
+                  "coeff_x",
+                  "rhs"
+                ]
+              },
+              "answer": {
+                "type": "tuple_int",
+                "of": [
+                  "coeff_x",
+                  "rhs"
+                ]
+              }
+            },
+            "conclude": {
+              "prompt": "Conclude the number of solutions.",
+              "ui": {
+                "type": "label_choice",
+                "labels": [
+                  "ONE_SOLUTION",
+                  "NO_SOLUTION",
+                  "INFINITE_SOLUTIONS"
+                ]
+              },
+              "answer": {
+                "type": "one_of",
+                "of": [
+                  "NO_SOLUTION"
+                ]
+              }
+            }
           }
         }
       ]
